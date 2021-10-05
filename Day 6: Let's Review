@@ -1,0 +1,40 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Taking number of test cases
+t = int(input(''))
+
+# Creating an array of words to be inputted
+S = []
+
+#looping to number of test cases
+for i in range(t):
+    
+    # Taking words from user
+    s = input('')
+    
+    #adding words to string array
+    S.append(s)
+
+#looping through each word in array
+for word in S:
+    
+    #creating empty strings to store letters
+    even = ""
+    odd = ""
+    
+    #looping through each letter in each word
+    for j in range(len(word)):
+        
+        # if the letter index is even
+        if j == 0 or j % 2 == 0:
+            
+            #adding letter to even
+            even += word[j]
+            
+        # if its odd
+        elif j % 2 == 1:
+            
+            #adding to odd
+            odd += word[j]
+            
+    #printing results
+    print(even, odd)
